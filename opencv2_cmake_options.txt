@@ -22,7 +22,7 @@
 -DWITH_V4L=OFF
 -DWITH_LIBV4L=OFF
 -DWITH_OPENCL=OFF
--DBUILD_SHARED_LIBS=OFF
+-DBUILD_SHARED_LIBS=ON
 -DBUILD_opencv_apps=OFF
 -DBUILD_ANDROID_EXAMPLES=OFF
 -DBUILD_DOCS=OFF
@@ -57,7 +57,7 @@
 -DBUILD_opencv_videoio=OFF
 -DBUILD_opencv_calib3d=OFF
 -DBUILD_opencv_flann=OFF
--DBUILD_opencv_objdetect=OFF
+-DBUILD_opencv_objdetect=ON
 -DBUILD_opencv_stitching=OFF
 -DBUILD_opencv_ml=OFF
 -DBUILD_opencv_superres=OFF
