@@ -1,0 +1,10 @@
+--- opencv-4.9.0.orig/modules/core/src/async.cpp 	2024-01-30 14:13:01.435350522 +0100
++++ opencv-4.9.0/modules/core/src/async.cpp	2024-01-30 14:14:00.291241068 +0100
+@@ -319,7 +319,6 @@
+         if (has_exception)
+         {
+             result_is_fetched = true;
+-            throw cv_exception;
+         }
+         CV_Error(Error::StsInternal, "AsyncArray: invalid state of 'has_result = true'");
+         return false;

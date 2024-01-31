@@ -1,0 +1,12 @@
+--- opencv-4.9.0.orig/CMakeLists.txt	2024-01-31 09:07:37.041280481 +0100
++++ opencv-4.9.0/CMakeLists.txt	2024-01-31 09:08:26.760847274 +0100
+@@ -1049,6 +1049,9 @@
+ include(cmake/OpenCVGenHeaders.cmake)
+ 
+ # Generate opencv.pc for pkg-config command
++if(OPENCV_GENERATE_PKGCONFIG)
++  include(cmake/OpenCVGenPkgconfig.cmake)
++endif()
+ 
+ # Generate OpenCV.mk for ndk-build (Android build tool)
+ 
