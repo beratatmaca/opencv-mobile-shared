@@ -83,8 +83,8 @@
 -DBUILD_opencv_dnn=OFF
 -DBUILD_opencv_imgcodecs=OFF
 -DBUILD_opencv_videoio=OFF
--DBUILD_opencv_calib3d=OFF
--DBUILD_opencv_flann=OFF
+-DBUILD_opencv_calib3d=ON
+-DBUILD_opencv_flann=ON
 -DBUILD_opencv_objdetect=ON
 -DBUILD_opencv_stitching=OFF
 -DBUILD_opencv_ml=OFF
@@ -93,3 +93,5 @@
 -DOPENCV_DISABLE_THREAD_SUPPORT=OFF
 -DOPENCV_DISABLE_FILESYSTEM_SUPPORT=ON
 -DENABLE_GNU_STL_DEBUG=OFF
+-DBUILD_opencv_world=OFF
+-DOPENCV_GENERATE_PKGCONFIG=ON

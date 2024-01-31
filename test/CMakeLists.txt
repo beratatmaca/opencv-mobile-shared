@@ -1,17 +1,18 @@
-project(opencv-mobile-test)
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 
-# opencv4 requires c++11
-set(CMAKE_CXX_STANDARD 11)
+project(ArUcoMarkerDetection)
 
-if(APPLE OR IOS)
-    # set OpenCV_DIR to where opencv2.framework resides
-    find_library(OpenCV_LIBS NAMES opencv2 PATHS ${OpenCV_DIR})
-else()
-    # set OpenCV_DIR to where OpenCVConfig.cmake resides
-    find_package(OpenCV REQUIRED)
-endif()
+# Find OpenCV using pkg-config
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(OPENCV REQUIRED opencv4)
 
-add_executable(opencv-mobile-test main.cpp)
+# Add the executable
+add_executable(aruco_marker_detection main.cpp)
+set(CMAKE_BUILD_TYPE Release)
+message(${OPENCV_INCLUDE_DIRS})
 
-target_link_libraries(opencv-mobile-test ${OpenCV_LIBS})
+# Include directories
+target_include_directories(aruco_marker_detection PRIVATE ${OPENCV_INCLUDE_DIRS})
+
+# Link the executable with OpenCV
+target_link_libraries(aruco_marker_detection PRIVATE ${OPENCV_LIBRARIES})
